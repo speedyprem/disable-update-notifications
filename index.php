@@ -67,7 +67,12 @@ function dwnSettings() {
         </section>
         <section id="section2">
             <input type="radio" name="sections" id="option2">
-            <label for="option2">Paul McCartney</label>
+            <label for="option2">Hide admin items
+                    <span class="dashicons dashicons-menu"></span>
+                    <div class="wbcr-factory-tab__short-description">
+                        Hide any admin menu
+                    </div>
+                </label>
             <article>
                 <h2>Paul McCartney</h2>
                 <p>Sir James Paul McCartney, (born 18 June 1942), is an English musician, singer, songwriter, multi-instrumentalist, and composer. With John Lennon, George Harrison and Ringo Starr, he gained worldwide fame as a member of the Beatles, widely regarded as one of the most popular and influential acts in the history of rock music; his songwriting partnership with Lennon is one of the most celebrated of the 20th century. After the band's break-up, he pursued a solo career and later formed Wings with his first wife, Linda, and Denny Laine.</p>
@@ -93,6 +98,10 @@ function dwnSettings() {
             </label>
             <article>
                 <div id="wbcr-clr-support-widget" class="wbcr-factory-sidebar-widget">
+                        <p>
+                            <strong>Do you want the plugin to improved and update?</strong>
+                        </p>
+                        <p>Help the author, leave a review on wordpress.org. Thanks to feedback, I will know that the plugin is really useful to you and is needed.</p>
                     <p><strong>Having Issues?</strong></p>
                     <div class="wbcr-clr-support-widget-body">
                         <p>

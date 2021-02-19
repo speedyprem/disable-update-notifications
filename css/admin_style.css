@@ -244,9 +244,8 @@ h1 {
     text-transform: none;
     color: #9a9a9a;
 }
-span.dashicons.dashicons-admin-generic, .dashicons.dashicons-admin-users {
+span.dashicons.dashicons-admin-generic, .dashicons.dashicons-admin-users, span.dashicons.dashicons-menu {
     float: right;
-    
 }
 .clear {
     margin-top: 25px;
