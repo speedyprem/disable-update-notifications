@@ -1,125 +1,143 @@
-table tr {
-	border: medium none;
-    height: 50px;
+
+
+
+h1 {
+    color: #333;
+    font-family: arial, sans-serif;
+    margin: 1em auto;
+    width: 80%;
 }
 
-.fm-wrapper{
-	background: #fff;
-	border-radius: 2px;
-	border: 1px solid #ccc;
-	margin-top: 20px;
-	margin-right: 20px;
+.tabordion {
+    color: #333;
+    display: block;
+    font-family: arial, sans-serif;
+    margin: auto;
+    position: relative;
 }
 
-.fm-content{
-	background-color: #FFF;
-	margin: 10px 0 0 20px;
-	width: 30%;
+.tabordion input[name="sections"] {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
 }
 
-.fm-footer{
-	text-align: right;
-	padding: 10px;
-	background: #F1F1F1;
-	border-top:1px solid #ccc;
+.tabordion section {
+    display: block;
 }
 
-.switch {
-     position: relative;
-     display: block;
-     vertical-align: top;
-     width: 100px;
-     height: 30px;
-     padding: 3px;
-     margin: 0 10px 10px 0;
-     background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
-     background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
-     border-radius: 18px;
-     box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
-     cursor: pointer;
-   }
-   .switch-input {
-     position: absolute;
-     top: 0;
-     left: 0;
-     opacity: 0;
-   }
-   .switch-label {
-     position: relative;
-     display: block;
-     height: inherit;
-     font-size: 10px;
-     text-transform: uppercase;
-     background: #eceeef;
-     border-radius: inherit;
-     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
-   }
-   .switch-label:before, .switch-label:after {
-     position: absolute;
-     top: 50%;
-     margin-top: -.5em;
-     line-height: 1;
-     -webkit-transition: inherit;
-     -moz-transition: inherit;
-     -o-transition: inherit;
-     transition: inherit;
-   }
-   .switch-label:before {
-     content: attr(data-off);
-     right: 11px;
-     color: #aaaaaa;
-     text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-   }
-   .switch-label:after {
-     content: attr(data-on);
-     left: 11px;
-     color: #FFFFFF;
-     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-     opacity: 0;
-   }
-   .switch-input:checked ~ .switch-label {
-         background: #E1B42B;
-     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
-   }
-   .switch-input:checked ~ .switch-label:before {
-     opacity: 0;
-   }
-   .switch-input:checked ~ .switch-label:after {
-     opacity: 1;
-   }
-   .switch-handle {
-     position: absolute;
-     top: 4px;
-     left: 4px;
-     width: 28px;
-     height: 28px;
-     background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
-     background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
-     border-radius: 100%;
-     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-   }
-   .switch-handle:before {
-     content: "";
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     margin: -6px 0 0 -6px;
-     width: 12px;
-     height: 12px;
-     background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
-     background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
-     border-radius: 6px;
-     box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
-   }
-   .switch-input:checked ~ .switch-handle {
-     left: 74px;
-     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
-   }
-   /* Transition
-       ========================== */
-   .switch-label, .switch-handle {
-     transition: All 0.3s ease;
-     -webkit-transition: All 0.3s ease;
-     -moz-transition: All 0.3s ease;
-     -o-transition: All 0.3s ease;
-   }
+.tabordion section label {
+    background: #ccc;
+    border:1px solid #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 20px;
+    position: relative;
+    width: 180px;
+    z-index:100;
+}
+
+.tabordion section article {
+    display: none;
+    left: 230px;
+    min-width: 300px;
+    padding: 0 0 0 21px;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    padding: 10px 30px 30px 30px;
+    min-height: 400px;
+    width: 75%;
+}
+
+.tabordion input[name="sections"]:checked + label {
+    background: #eee;
+    color: #bbb;
+}
+
+.tabordion input[name="sections"]:checked ~ article {
+    display: block;
+}
+
+
+@media (max-width: 533px) {
+
+    h1 {
+        width: 100%;
+    }
+
+    .tabordion {
+        width: 100%;
+    }
+
+
+    .tabordion section label {
+        font-size: 1em;
+        width: 160px;
+    }
+
+    .tabordion section article {
+        left: 200px;
+        min-width: 270px;
+    }
+
+    .tabordion section article:after {
+        background-color: #ccc;
+        bottom: 0;
+        content: "";
+        display: block;
+        left:-199px;
+        position: absolute;
+        top: 0;
+        width: 200px;
+
+    }
+
+}
+
+/*custom css code*/
+.wbcr-factory-page-header {
+    overflow: hidden;
+    background-color: #32373c;
+    border-radius: 5px 5px 0 0;
+    width: 98%;
+}
+
+.wbcr-factory-tab__short-description {
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: none;
+    color: #9a9a9a;
+}
+span.dashicons.dashicons-admin-generic, .dashicons.dashicons-admin-users, span.dashicons.dashicons-menu, span.dashicons.dashicons-info-outline {
+    float: right;
+}
+.clear {
+    margin-top: 25px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    h1 {
+        width: 96%;
+    }
+
+    .tabordion {
+        width: 96%;
+    }
+}
+
+
+@media (min-width: 1366px) {
+    h1 {
+        color: #fff;
+        margin-left: 15px;
+    }
+}
+
