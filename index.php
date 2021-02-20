@@ -47,50 +47,50 @@ function dwnSettings() {
                     <div class="wbcr-factory-page-group-header">
                         <p>Do you know the situation, when some plugin offers you to update to premium, to collect technical data and shows many annoying notices? You are close these notices every now and again but they newly appears and interfere your work with WordPress. Even worse, some plugin’s authors delete “close” button from notices and they shows in your admin panel forever.</p>
                     </div>
-                    <div class="form-group form-group-checkbox  factory-control-show_notices_in_adminbar">
-                        <label for="wbcr_dan_show_notices_in_adminbar" class="col-sm-4 control-label">
-                            Enable hidden notices in adminbar																<span class="factory-hint-icon factory-hint-icon-green" data-toggle="factory-tooltip" data-placement="right" title="" data-original-title="By default, the plugin hides all notices, which you specified. If you enable this option, the plugin will collect all hidden notices and show them into the top admin toolbar. It will not disturb you but will allow to look notices at your convenience.">
-							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAQAAABKmM6bAAAAUUlEQVQIHU3BsQ1AQABA0X/komIrnQHYwyhqQ1hBo9KZRKL9CBfeAwy2ri42JA4mPQ9rJ6OVt0BisFM3Po7qbEliru7m/FkY+TN64ZVxEzh4ndrMN7+Z+jXCAAAAAElFTkSuQmCC" alt="">
 
-						</span>
-                        </label>
-                        <div class="control-group col-sm-8">
-                            <div class="factory-checkbox factory-from-control-checkbox factory-buttons-way btn-group">
-                                <button type="button" class="btn btn-default btn-small btn-sm factory-on">On</button>
-                                <button type="button" class="btn btn-default btn-small btn-sm factory-off active" data-value="0">Off</button>
-                                <input type="checkbox" style="display: none" id="wbcr_dan_show_notices_in_adminbar" class="factory-result" name="wbcr_dan_show_notices_in_adminbar" value="0" "="">
-                            </div>
-
-                        </div>
+                    <div class="factory-checkbox factory-from-control-checkbox factory-buttons-way btn-group">
+                        <button type="button" class="btn btn-default btn-small btn-sm factory-on active">On</button>
+                        <button type="button" class="btn btn-default btn-small btn-sm factory-off" data-value="0">Off</button>
+                        <input type="checkbox" style="display: none" id="wbcr_dan_show_notices_in_adminbar" class="factory-result" name="wbcr_dan_show_notices_in_adminbar" value="1" "="" checked="checked">
                     </div>
+                    
             </article>
         </section>
+
         <section id="section2">
             <input type="radio" name="sections" id="option2">
-            <label for="option2">Hide admin items
-                    <span class="dashicons dashicons-menu"></span>
-                    <div class="wbcr-factory-tab__short-description">
-                        Hide any admin menu
-                    </div>
-                </label>
+            <label for="option2">System
+                <span class="dashicons dashicons-info-outline"></span>
+                <div class="wbcr-factory-tab__short-description">
+                    System information
+                </div>
+            </label>
             <article>
-                <h2>Paul McCartney</h2>
-                <p>Sir James Paul McCartney, (born 18 June 1942), is an English musician, singer, songwriter, multi-instrumentalist, and composer. With John Lennon, George Harrison and Ringo Starr, he gained worldwide fame as a member of the Beatles, widely regarded as one of the most popular and influential acts in the history of rock music; his songwriting partnership with Lennon is one of the most celebrated of the 20th century. After the band's break-up, he pursued a solo career and later formed Wings with his first wife, Linda, and Denny Laine.</p>
-                <p>McCartney has been recognised as one of the most successful composers and performers of all time, with 60 gold discs and sales of over 100 million albums and 100 million singles of his work with the Beatles and as a solo artist.[2] More than 2,200 artists have covered his Beatles song "Yesterday", more than any other copyrighted song in history. Wings' 1977 release "Mull of Kintyre" is one of the all-time best-selling singles in the UK. Inducted into the Rock and Roll Hall of Fame as a solo artist in March 1999, McCartney has written, or co-written 32 songs that have reached number one on the Billboard Hot 100, and as of 2014 he has sold more than 15.5 million RIAA-certified units in the United States. McCartney, Lennon, Harrison and Starr received MBEs in 1965, and in 1997, McCartney was knighted for his services to music.</p>
-                <p>McCartney has released an extensive catalogue of songs as a solo artist and has composed classical and electronic music. He has taken part in projects to promote international charities related to such subjects as animal rights, seal hunting, land mines, vegetarianism, poverty, and music education. He has married three times and is the father of five children.</p>
+                <div id="wbcr-clr-support-widget" class="wbcr-factory-sidebar-widget">
+                    <p>
+                        <strong>Do you want the plugin to improved and update?</strong>
+                    </p>
+                    <p>Help the author, leave a review on wordpress.org. Thanks to feedback, I will know that the plugin is really useful to you and is needed.</p>
+                    <p><strong>Having Issues?</strong></p>
+                    <div class="wbcr-clr-support-widget-body">
+                        <p>
+                            We provide free support for this plugin. If you are pushed with a problem, just create a new ticket. We will definitely help you!				</p>
+                        <ul>
+                            <li><span class="dashicons dashicons-sos"></span>
+                                <a href="#" target="_blank" rel="noopener">Get starting free support</a>
+                            </li>
+                            <li style="margin-top: 15px;background: #fff4f1;padding: 10px;color: #a58074;">
+                                <span class="dashicons dashicons-warning"></span>
+                                If you find a php error or a vulnerability in plugin, you can <a href="#" target="_blank" rel="noopener">create ticket</a> in hot support that we responded instantly.					</li>
+                        </ul>
+                    </div>
+                </div>
             </article>
         </section>
+
         <section id="section3">
             <input type="radio" name="sections" id="option3">
-            <label for="option3">George Harrison</label>
-            <article>
-                <h2>George Harrison</h2>
-                <p>George Harrison, (25 February 1943 – 29 November 2001), was an English musician, multi-instrumentalist, singer and songwriter who achieved international fame as the lead guitarist of the Beatles. Although John Lennon and Paul McCartney were the band's primary songwriters, most of their albums included at least one Harrison composition, including "While My Guitar Gently Weeps", "Here Comes the Sun" and "Something", which became the Beatles' second-most-covered song.</p>
-            </article>
-        </section>
-        <section id="section4">
-            <input type="radio" name="sections" id="option4">
-            <label for="option4">Help
+            <label for="option3">Help
                 <span class="dashicons dashicons-admin-users"></span>
                 <div class="wbcr-factory-tab__short-description">
                     Having Issues?
@@ -98,10 +98,10 @@ function dwnSettings() {
             </label>
             <article>
                 <div id="wbcr-clr-support-widget" class="wbcr-factory-sidebar-widget">
-                        <p>
-                            <strong>Do you want the plugin to improved and update?</strong>
-                        </p>
-                        <p>Help the author, leave a review on wordpress.org. Thanks to feedback, I will know that the plugin is really useful to you and is needed.</p>
+                    <p>
+                        <strong>Do you want the plugin to improved and update?</strong>
+                    </p>
+                    <p>Help the author, leave a review on wordpress.org. Thanks to feedback, I will know that the plugin is really useful to you and is needed.</p>
                     <p><strong>Having Issues?</strong></p>
                     <div class="wbcr-clr-support-widget-body">
                         <p>
