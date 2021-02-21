@@ -1,0 +1,272 @@
+
+/* base styles */
+input[type="radio"],
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 0 0.4em 0.4em 0;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #AAAAAA;
+    -webkit-appearance: none;
+}
+
+/* border radius for radio*/
+input[type="radio"] {
+    border-radius: 100%;
+}
+
+/* border radius for checkbox */
+input[type="checkbox"] {
+    border-radius: 2px;
+}
+
+/* hover state */
+input[type="radio"]:not(:disabled):hover,
+input[type="checkbox"]:not(:disabled):hover {
+    border: 1px solid rgba(58, 197, 201, 1);
+}
+
+/* active state */
+input[type="radio"]:active:not(:disabled),
+input[type="checkbox"]:active:not(:disabled) {
+    border: 1px solid rgba(58, 197, 201, 1);
+}
+
+/* input checked border color */
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    border: 1px solid rgba(58, 197, 201, 1);
+}
+
+input[type="checkbox"]:checked:not(:disabled) {
+    background: rgba(58, 197, 201, 1);
+}
+
+/* radio checked */
+input[type="radio"]:checked:before {
+    display: block;
+    height: 14px;
+    width: 14px;
+    position: relative;
+    left: 2px;
+    top: 2px;
+    background: rgba(58, 197, 201, 1);
+    border-radius: 100%;
+    content: '';
+}
+
+/* checkbox checked */
+input[type="checkbox"]:checked:before {
+    font-weight: bold;
+    color: white;
+    content: '\2713';
+    margin-left: 2px;
+    font-size: 14px;
+}
+
+/* disabled input */
+input:disabled {
+    background: rgba(0, 0, 0, 0.3);
+&:checked {
+     border: 1px solid rgba(0, 0, 0, 0.3);
+ }
+}
+
+input[type="radio"]:disabled:checked:before {
+    display: block;
+    height: 14px;
+    width: 14px;
+    position: relative;
+    left: 2px;
+    top: 2px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 100%;
+    content: '';
+}
+
+/* SWITCH STYLES */
+/* SOURCE: https://proto.io/freebies/onoff/ */
+.onoffswitch {
+    position: relative; width: 56px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 22px; padding: 0; line-height: 22px;
+    font-size: 12px; color: black; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 6px;
+    background-color: #3AC5C9; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 6px;
+    background-color: #E85764; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 12px; margin: 5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 30px;
+    border: 2px solid #FFFFFF; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+
+
+
+.tabordion {
+    color: #333;
+    display: block;
+    font-family: arial, sans-serif;
+    margin: auto;
+    position: relative;
+}
+.tabordion input[name="sections"] {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+.tabordion section {
+    display: block;
+}
+.tabordion section label {
+    background: #ccc;
+    border:1px solid #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 20px;
+    position: relative;
+    width: 180px;
+    z-index:100;
+}
+.tabordion section article {
+    display: none;
+    left: 230px;
+    min-width: 300px;
+    padding: 0 0 0 21px;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    padding: 10px 30px 30px 30px;
+    min-height: 400px;
+    width: 75%;
+}
+.tabordion input[name="sections"]:checked + label {
+    background: #eee;
+    color: #bbb;
+}
+.tabordion input[name="sections"]:checked ~ article {
+    display: block;
+}
+
+@media (max-width: 533px) {
+    h1 {
+        width: 100%;
+    }
+    .tabordion {
+        width: 100%;
+    }
+    .tabordion section label {
+        font-size: 1em;
+        width: 160px;
+    }
+    .tabordion section article {
+        left: 200px;
+        min-width: 270px;
+    }
+    .tabordion section article:after {
+        background-color: #ccc;
+        bottom: 0;
+        content: "";
+        display: block;
+        left:-199px;
+        position: absolute;
+        top: 0;
+        width: 200px;
+
+    }
+}
+
+/*custom css code*/
+.wbcr-factory-page-header {
+    overflow: hidden;
+    background-color: #32373c;
+    border-radius: 5px 5px 0 0;
+    width: 98%;
+}
+.wbcr-factory-tab__short-description {
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: none;
+    color: #9a9a9a;
+}
+.textarea-wrap {
+    background: #eee;
+    width: 100%;
+    min-height: 400px;
+}
+input#myonoffswitch {
+    visibility: hidden;
+}
+span.dashicons.dashicons-admin-generic, .dashicons.dashicons-admin-users,
+span.dashicons.dashicons-menu, span.dashicons.dashicons dashicons-menu {
+    float: right;
+}
+.settings-label{
+    float: left;
+    width: 250px;
+}
+#WBCR .wdan-button.wdan-button-go-pro {
+    background-color: #ff5722;
+}
+#WBCR .wdan-button.wdan-button-default {
+    background-color: #a4afb7;
+    color: #fff;
+    font-size: 11px;
+    padding: 7px 21px;
+}
+.clear {
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        width: 96%;
+    }
+
+    .tabordion {
+        width: 96%;
+    }
+}
+
+@media (min-width: 1366px) {
+    h1 {
+        color: #fff;
+        margin-left: 15px;
+    }
+}
