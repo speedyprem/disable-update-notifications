@@ -4,7 +4,7 @@
  * Plugin URI: http://www.freewebmentor.com/2016/04/disable-wordpress-update-notifications.html
  * Description: This plugin will disable WordPress core update notification, plugin update notification and theme update notifications and inline warnings in your admin panel.
  * Author: Prem Tiwari
- * Version: 2.2.1
+ * Version: 2.3.0
  * Author URI: https://www.freewebmentor.com
  */
 
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once( dirname( __FILE__ ) . '/disable-auto-email-notification.php' );
 
 function admin_style() {
-	wp_enqueue_style( 'fm_admin_style', plugins_url( "css/admin_style.css", __FILE__ ) );
+	wp_enqueue_style( 'dwun-admin-style', plugins_url( "css/admin-style.css", __FILE__ ) );
 }
 
 add_action( 'admin_enqueue_scripts', 'admin_style' );
@@ -43,60 +43,73 @@ function dwnSettings() {
             </label>
             <article>
                 <h2>Admin notifications</h2>
-                <fieldset id="factory-form-group-form-group-1481797469" class="factory-form-group factory-form-group-form-group-1481797469">
-                    <div class="wbcr-factory-page-group-header">
-                        <p>Do you know the situation, when some plugin offers you to update to premium, to collect technical data and shows many annoying notices? You are close these notices every now and again but they newly appears and interfere your work with WordPress. Even worse, some plugin’s authors delete “close” button from notices and they shows in your admin panel forever.</p>
-                    </div>
-
-                    <div class="factory-checkbox factory-from-control-checkbox factory-buttons-way btn-group">
-                        <button type="button" class="btn btn-default btn-small btn-sm factory-on active">On</button>
-                        <button type="button" class="btn btn-default btn-small btn-sm factory-off" data-value="0">Off</button>
-                        <input type="checkbox" style="display: none" id="wbcr_dan_show_notices_in_adminbar" class="factory-result" name="wbcr_dan_show_notices_in_adminbar" value="1" "="" checked="checked">
-                    </div>
-                    
+                <p>Do you know the situation, when some plugin offers you to update to premium, to collect technical data and shows many annoying notices? You are close these notices every now and again but they newly appears and interfere your work with WordPress. Even worse, some plugin’s authors delete “close” button from notices and they shows in your admin panel forever.</p>
+                <form name="fm_dwun" method="POST">
+                    <table>
+                        <tbody>
+                        <tr class="mlw-box-left">
+                            <th scope="row">
+                                <span for="dpun">Plugin Update Notifications </span>
+                            </th>
+                            <td>
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="dpun" class="onoffswitch-checkbox" id="myonoffswitch" <?php if ( "on" === get_option( "dpun_setting" ) ) {
+	                                    echo "checked"; } ?>>
+                                    <label class="onoffswitch-label" for="myonoffswitch" style="background: none; width: 56px; border: none;padding: inherit;">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <span for="dwtu">Theme Update Notifications</span>
+                            </th>
+                            <td>
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="dwtu" class="onoffswitch-checkbox" id="dwtu" <?php if ( "on" === get_option( "dwtu_setting" ) ) {
+	                                    echo "checked"; } ?>>
+                                    <label class="onoffswitch-label" for="dwtu" style="background: none; width: 56px; border: none;padding: inherit;">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <span for="dwcun">Core Update Notifications</span>
+                            </th>
+                            <td>
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="dwcun" class="onoffswitch-checkbox" id="dwcun" <?php if ( "on" === get_option( "dwcun_setting" ) ) {
+	                                    echo "checked"; } ?>>
+                                    <label class="onoffswitch-label" for="dwcun" style="background: none; width: 56px; border: none;padding: inherit;">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="fm-footer">
+                        <input type="submit" name="publish" id="publish" class="button button-primary" value="Save Changes">
+                    </p>
+                </form>
             </article>
         </section>
-
         <section id="section2">
             <input type="radio" name="sections" id="option2">
-            <label for="option2">System
-                <span class="dashicons dashicons-info-outline"></span>
-                <div class="wbcr-factory-tab__short-description">
-                    System information
-                </div>
-            </label>
-            <article>
-                <div id="wbcr-clr-support-widget" class="wbcr-factory-sidebar-widget">
-                    <p>
-                        <strong>Do you want the plugin to improved and update?</strong>
-                    </p>
-                    <p>Help the author, leave a review on wordpress.org. Thanks to feedback, I will know that the plugin is really useful to you and is needed.</p>
-                    <p><strong>Having Issues?</strong></p>
-                    <div class="wbcr-clr-support-widget-body">
-                        <p>
-                            We provide free support for this plugin. If you are pushed with a problem, just create a new ticket. We will definitely help you!				</p>
-                        <ul>
-                            <li><span class="dashicons dashicons-sos"></span>
-                                <a href="#" target="_blank" rel="noopener">Get starting free support</a>
-                            </li>
-                            <li style="margin-top: 15px;background: #fff4f1;padding: 10px;color: #a58074;">
-                                <span class="dashicons dashicons-warning"></span>
-                                If you find a php error or a vulnerability in plugin, you can <a href="#" target="_blank" rel="noopener">create ticket</a> in hot support that we responded instantly.					</li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <section id="section3">
-            <input type="radio" name="sections" id="option3">
-            <label for="option3">Help
+            <label for="option2">Help
                 <span class="dashicons dashicons-admin-users"></span>
                 <div class="wbcr-factory-tab__short-description">
                     Having Issues?
                 </div>
             </label>
             <article>
+                <h2>Need Support</h2>
                 <div id="wbcr-clr-support-widget" class="wbcr-factory-sidebar-widget">
                     <p>
                         <strong>Do you want the plugin to improved and update?</strong>
@@ -107,12 +120,9 @@ function dwnSettings() {
                         <p>
                             We provide free support for this plugin. If you are pushed with a problem, just create a new ticket. We will definitely help you!				</p>
                         <ul>
-                            <li><span class="dashicons dashicons-sos"></span>
-                                <a href="#" target="_blank" rel="noopener">Get starting free support</a>
-                            </li>
                             <li style="margin-top: 15px;background: #fff4f1;padding: 10px;color: #a58074;">
                                 <span class="dashicons dashicons-warning"></span>
-                                If you find a php error or a vulnerability in plugin, you can <a href="#" target="_blank" rel="noopener">create ticket</a> in hot support that we responded instantly.					</li>
+                                If you find a php error or a vulnerability in plugin, you can <a href="https://github.com/speedyprem/disable-update-notifications/issues" target="_blank" rel="noopener">raise an issue</a> in github.</li>
                         </ul>
                     </div>
                 </div>
@@ -153,7 +163,7 @@ function dwnSettings() {
 
 #add in admin side panel
 function Amin_menu_dwnSettings() {
-	add_options_page( 'Disable Wordpress Notification Settings', 'Disable Notification Settings', 'manage_options', 'fm-dwns', 'dwnSettings' );
+	add_options_page( 'Disable Wordpress Notification Settings', 'Disable Notifications', 'manage_options', 'fm-dwns', 'dwnSettings' );
 }
 
 add_action( 'admin_menu', 'Amin_menu_dwnSettings' );
