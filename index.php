@@ -45,7 +45,7 @@ function dwnSettings() {
                 <h2>Admin notifications</h2>
                 <p>Do you know the situation, when some plugin offers you to update to premium, to collect technical data and shows many annoying notices? You are close these notices every now and again but they newly appears and interfere your work with WordPress. Even worse, some plugin’s authors delete “close” button from notices and they shows in your admin panel forever.</p>
                 <form name="fm_dwun" method="POST">
-                    <table class="fm-content">
+                    <table>
                         <tbody>
                         <tr class="mlw-box-left">
                             <th scope="row">
@@ -53,7 +53,7 @@ function dwnSettings() {
                             </th>
                             <td>
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="dpun" class="onoffswitch-checkbox" id="myonoffswitch" <?php if ( get_option( "dpun_setting" ) == "on" ) {
+                                    <input type="checkbox" name="dpun" class="onoffswitch-checkbox" id="myonoffswitch" <?php if ( "on" === get_option( "dpun_setting" ) ) {
 	                                    echo "checked"; } ?>>
                                     <label class="onoffswitch-label" for="myonoffswitch" style="background: none; width: 56px; border: none;padding: inherit;">
                                         <span class="onoffswitch-inner"></span>
@@ -68,8 +68,9 @@ function dwnSettings() {
                             </th>
                             <td>
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                                    <label class="onoffswitch-label" for="myonoffswitch" style="background: none; width: 56px; border: none;padding: inherit;">
+                                    <input type="checkbox" name="dwtu" class="onoffswitch-checkbox" id="dwtu" <?php if ( "on" === get_option( "dwtu_setting" ) ) {
+	                                    echo "checked"; } ?>>
+                                    <label class="onoffswitch-label" for="dwtu" style="background: none; width: 56px; border: none;padding: inherit;">
                                         <span class="onoffswitch-inner"></span>
                                         <span class="onoffswitch-switch"></span>
                                     </label>
@@ -82,8 +83,9 @@ function dwnSettings() {
                             </th>
                             <td>
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-                                    <label class="onoffswitch-label" for="myonoffswitch" style="background: none; width: 56px; border: none;padding: inherit;">
+                                    <input type="checkbox" name="dwcun" class="onoffswitch-checkbox" id="dwcun" <?php if ( "on" === get_option( "dwcun_setting" ) ) {
+	                                    echo "checked"; } ?>>
+                                    <label class="onoffswitch-label" for="dwcun" style="background: none; width: 56px; border: none;padding: inherit;">
                                         <span class="onoffswitch-inner"></span>
                                         <span class="onoffswitch-switch"></span>
                                     </label>
@@ -161,7 +163,7 @@ function dwnSettings() {
 
 #add in admin side panel
 function Amin_menu_dwnSettings() {
-	add_options_page( 'Disable Wordpress Notification Settings', 'Disable Notification Settings', 'manage_options', 'fm-dwns', 'dwnSettings' );
+	add_options_page( 'Disable Wordpress Notification Settings', 'Disable Notifications', 'manage_options', 'fm-dwns', 'dwnSettings' );
 }
 
 add_action( 'admin_menu', 'Amin_menu_dwnSettings' );

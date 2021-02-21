@@ -19,6 +19,7 @@ input[type="radio"] {
 /* border radius for checkbox */
 input[type="checkbox"] {
     border-radius: 2px;
+    visibility: hidden;
 }
 
 /* hover state */
@@ -88,8 +89,12 @@ input[type="radio"]:disabled:checked:before {
 /* SWITCH STYLES */
 /* SOURCE: https://proto.io/freebies/onoff/ */
 .onoffswitch {
-    position: relative; width: 56px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    position: relative;
+    width: 56px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    top: -10px;
+    left: 40px;
 }
 .onoffswitch-checkbox {
     display: none;
@@ -230,9 +235,6 @@ input[type="radio"]:disabled:checked:before {
     width: 100%;
     min-height: 400px;
 }
-input#myonoffswitch {
-    visibility: hidden;
-}
 span.dashicons.dashicons-admin-generic, .dashicons.dashicons-admin-users,
 span.dashicons.dashicons-menu, span.dashicons.dashicons dashicons-menu {
     float: right;
@@ -241,19 +243,16 @@ span.dashicons.dashicons-menu, span.dashicons.dashicons dashicons-menu {
     float: left;
     width: 250px;
 }
-#WBCR .wdan-button.wdan-button-go-pro {
-    background-color: #ff5722;
-}
-#WBCR .wdan-button.wdan-button-default {
-    background-color: #a4afb7;
-    color: #fff;
-    font-size: 11px;
-    padding: 7px 21px;
-}
 .clear {
     margin-top: 25px;
 }
-
+.fm-footer{
+    text-align: right;
+    padding: 10px;
+    background: #F1F1F1;
+    border-bottom:1px solid #ccc;
+    margin-top: 70px;
+}
 @media (max-width: 768px) {
     h1 {
         width: 96%;
