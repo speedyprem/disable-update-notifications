@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This plugin will completely disables the wordpress core update notification and plugins update notification update notification system by WordPress.
+This plugin will completely disables the Plugins, Themes, and WordPress core update notifications displayed by WordPress based on your plugin settings. Apart from this it will also disable auto-update Email Notifications.
 
 ## DISABLE AUTO-UPDATE EMAIL NOTIFICATIONS
 
