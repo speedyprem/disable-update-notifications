@@ -113,7 +113,7 @@ function dwnSettings() {
 			<label for="option2">Advace Settings
 				<span class="dashicons dashicons-admin-generic"></span>
 				<div class="wbcr-factory-tab__short-description">
-				Hide unwanted notifications
+				Hide other plugins or themes notifications
 				</div>
 			</label>
 			<article>
