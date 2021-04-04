@@ -117,8 +117,12 @@ function dwnSettings() {
 				</div>
 			</label>
 			<article>
-				<h2>Advace Settings</h2>
-				<p>Do you know the situation, when some plugin offers you to update to premium, to collect technical data and shows many annoying notices? You are close these notices every now and again but they newly appears and interfere your work with WordPress. Even worse, some plugin’s authors delete “close” button from notices and they shows in your admin panel forever.</p>
+				<center>
+					<h1>Advace Settings PRO</h1>
+					<p style="font-size: 18px;color: #b3b3b3;width: 70%;text-align: left;">
+					This features allows you to disable annoying menu items in the admin bar. Some plugins take up space in the admin bar to insert their ads. Just get rid of this ad with the premium features of our plugin.
+					</p>
+				</center>
 			</article>
 		</section>
 		
