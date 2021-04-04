@@ -138,9 +138,6 @@ input[type="radio"]:disabled:checked:before {
     right: 0px;
 }
 
-
-
-
 .tabordion {
     color: #333;
     display: block;
@@ -235,7 +232,7 @@ input[type="radio"]:disabled:checked:before {
     width: 100%;
     min-height: 400px;
 }
-span.dashicons.dashicons-admin-generic, .dashicons.dashicons-admin-users,
+span.dashicons.dashicons-admin-generic, span.dashicons.dashicons-hidden, .dashicons.dashicons-admin-users,
 span.dashicons.dashicons-menu, span.dashicons.dashicons dashicons-menu {
     float: right;
 }

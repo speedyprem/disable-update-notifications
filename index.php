@@ -114,7 +114,7 @@ function dwnSettings() {
 		<section id="section2">
 			<input type="radio" name="sections" id="option2">
 			<label for="option2">Advace Settings
-				<span class="dashicons dashicons-admin-generic"></span>
+				<span class="dashicons dashicons-hidden"></span>
 				<div class="wbcr-factory-tab__short-description">
 				Hide other plugins or themes notifications
 				</div>
