@@ -12,6 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+define( 'DWUN_PLUGIN_DIR', dirname( __FILE__ ) );
+define( 'DWUN_PLUGIN_BASE', plugin_basename( __FILE__ ) );
+
 // include disable auto-update Email Notifications.
 require_once( dirname( __FILE__ ) . '/disable-auto-email-notification.php' );
 
@@ -117,8 +120,12 @@ function dwnSettings() {
 				</div>
 			</label>
 			<article>
-				<h2>Advace Settings</h2>
-				<p>Do you know the situation, when some plugin offers you to update to premium, to collect technical data and shows many annoying notices? You are close these notices every now and again but they newly appears and interfere your work with WordPress. Even worse, some plugin’s authors delete “close” button from notices and they shows in your admin panel forever.</p>
+				<center>
+					<h1>Advace Settings PRO</h1>
+					<p style="font-size: 18px;color: #b3b3b3;width: 70%;text-align: left;">
+					This features allows you to disable annoying menu items in the admin bar. Some plugins take up space in the admin bar to insert their ads. Just get rid of this ad with the premium features of our plugin.
+					</p>
+				</center>
 			</article>
 		</section>
 		
@@ -188,4 +195,28 @@ if ( get_option( 'dwcun_setting' ) == "on" ) {
 	}
 }
 
-?>
+/**
+ * Genral plugins functions used for Admin and frontend enterface.
+ */
+function dwun_plugin_settings_link($links) {
+    $settings_link = '<a href="options-general.php?page=fm-dwns">Settings</a>'; 
+    array_unshift($links, $settings_link); 
+    return $links; 
+  }
+
+add_filter( 'plugin_action_links_' . DWUN_PLUGIN_BASE, 'dwun_plugin_settings_link' );
+
+/**
+ * Adding premium link inside plugin listing page.
+ */
+function dwun_add_plugin_meta_link( $links, $file ) {
+	if ( DWUN_PLUGIN_BASE === $file ) {
+		$url     = '#';
+		$url     .= '?utm_source=wordpress.org&utm_campaign=dwun';
+		$links[] = '<a href="' . $url . '" style="color: #FF5722;font-weight: bold;" target="_blank">' . __( 'Get premium plugin' ) . '</a>';
+	}
+
+	return $links;
+}
+
+add_filter( 'plugin_row_meta', 'dwun_add_plugin_meta_link', 10, 2 );
