@@ -107,24 +107,9 @@ function dwnSettings() {
 				</form>
 			</article>
 		</section>
-
 		<section id="section2">
 			<input type="radio" name="sections" id="option2">
-			<label for="option2">Advace Settings
-				<span class="dashicons dashicons-admin-generic"></span>
-				<div class="wbcr-factory-tab__short-description">
-				Hide unwanted notifications
-				</div>
-			</label>
-			<article>
-				<h2>Advace Settings</h2>
-				<p>Do you know the situation, when some plugin offers you to update to premium, to collect technical data and shows many annoying notices? You are close these notices every now and again but they newly appears and interfere your work with WordPress. Even worse, some plugin’s authors delete “close” button from notices and they shows in your admin panel forever.</p>
-			</article>
-		</section>
-		
-		<section id="section3">
-			<input type="radio" name="sections" id="option3">
-			<label for="option3">Help
+			<label for="option2">Help
 				<span class="dashicons dashicons-admin-users"></span>
 				<div class="wbcr-factory-tab__short-description">
 					Having Issues?
