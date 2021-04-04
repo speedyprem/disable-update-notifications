@@ -12,6 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+define( 'DWUN_PLUGIN_DIR', dirname( __FILE__ ) );
+define( 'DWUN_PLUGIN_BASE', plugin_basename( __FILE__ ) );
+
 // include disable auto-update Email Notifications.
 require_once( dirname( __FILE__ ) . '/disable-auto-email-notification.php' );
 
@@ -195,11 +198,25 @@ if ( get_option( 'dwcun_setting' ) == "on" ) {
 /**
  * Genral plugins functions used for Admin and frontend enterface.
  */
-function dun_plugin_settings_link($links) { 
+function dwun_plugin_settings_link($links) {
     $settings_link = '<a href="options-general.php?page=fm-dwns">Settings</a>'; 
     array_unshift($links, $settings_link); 
     return $links; 
   }
-  $plugin = plugin_basename(__FILE__); 
 
-add_filter("plugin_action_links_$plugin", 'dun_plugin_settings_link' );
+add_filter( 'plugin_action_links_' . DWUN_PLUGIN_BASE, 'dwun_plugin_settings_link' );
+
+/**
+ * Adding premium link inside plugin listing page.
+ */
+function dwun_add_plugin_meta_link( $links, $file ) {
+	if ( DWUN_PLUGIN_BASE === $file ) {
+		$url     = '#';
+		$url     .= '?utm_source=wordpress.org&utm_campaign=dwun';
+		$links[] = '<a href="' . $url . '" style="color: #FF5722;font-weight: bold;" target="_blank">' . __( 'Get premium plugin' ) . '</a>';
+	}
+
+	return $links;
+}
+
+add_filter( 'plugin_row_meta', 'dwun_add_plugin_meta_link', 10, 2 );
