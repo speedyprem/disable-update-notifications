@@ -14,14 +14,12 @@ If you manage a dozen of websites, then the you will receive the constant stream
 
 I have added a new feature to cure the problem by automatically Disable auto-update Email Notifications for plugins and themes auto-update email notifications.
 
-
 ## Installation
 
 * Login in your WordPress admin panel.
 * Navigate to Plugins => Add New from left menu bar.
 * Now search “Disable WordPress Update Notifications” in search box.
 * Click on Install Now button and click on activate button to activate the plugin.
-
 
 ## License
 
