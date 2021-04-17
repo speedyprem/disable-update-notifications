@@ -12,6 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+define( 'DWUN_PLUGIN_DIR', dirname( __FILE__ ) );
+define( 'DWUN_PLUGIN_BASE', plugin_basename( __FILE__ ) );
+
 // include disable auto-update Email Notifications.
 require_once( dirname( __FILE__ ) . '/disable-auto-email-notification.php' );
 
@@ -107,9 +110,10 @@ function dwnSettings() {
 				</form>
 			</article>
 		</section>
-		<section id="section2">
-			<input type="radio" name="sections" id="option2">
-			<label for="option2">Help
+		
+		<section id="section3">
+			<input type="radio" name="sections" id="option3">
+			<label for="option3">Help
 				<span class="dashicons dashicons-admin-users"></span>
 				<div class="wbcr-factory-tab__short-description">
 					Having Issues?
@@ -173,4 +177,13 @@ if ( get_option( 'dwcun_setting' ) == "on" ) {
 	}
 }
 
-?>
+/**
+ * Genral plugins functions used for Admin and frontend enterface.
+ */
+function dwun_plugin_settings_link($links) {
+    $settings_link = '<a href="options-general.php?page=fm-dwns">Settings</a>'; 
+    array_unshift($links, $settings_link); 
+    return $links; 
+  }
+
+add_filter( 'plugin_action_links_' . DWUN_PLUGIN_BASE, 'dwun_plugin_settings_link' );
