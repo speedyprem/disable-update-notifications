@@ -115,12 +115,14 @@ input[type="radio"]:disabled:checked:before {
 .onoffswitch-inner:before {
     content: "ON";
     padding-left: 6px;
-    background-color: #3AC5C9; color: #FFFFFF;
+    background-color: #048a1a; 
+    color: #FFFFFF;
 }
 .onoffswitch-inner:after {
     content: "OFF";
     padding-right: 6px;
-    background-color: #E85764; color: #FFFFFF;
+    background-color: #b10707e0; 
+    color: #FFFFFF;
     text-align: right;
 }
 .onoffswitch-switch {
@@ -157,7 +159,8 @@ input[type="radio"]:disabled:checked:before {
     display: block;
 }
 .tabordion section label {
-    background: #ccc;
+    background: #eee;
+    color: #bbb;
     border:1px solid #fff;
     cursor: pointer;
     display: block;
@@ -181,8 +184,11 @@ input[type="radio"]:disabled:checked:before {
     width: 75%;
 }
 .tabordion input[name="sections"]:checked + label {
-    background: #eee;
-    color: #bbb;
+    background: #ccc;
+    color: #111;
+}
+small {
+    color: #9a9a9a;
 }
 .tabordion input[name="sections"]:checked ~ article {
     display: block;
