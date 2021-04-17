@@ -223,6 +223,9 @@ input[type="radio"]:disabled:checked:before {
     border-radius: 5px 5px 0 0;
     width: 98%;
 }
+tr.mlw-box-left {
+    text-align: left;
+}
 .wbcr-factory-tab__short-description {
     display: block;
     font-size: 13px;

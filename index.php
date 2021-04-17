@@ -59,7 +59,8 @@ function dwnSettings() {
 						<tbody>
 						<tr class="mlw-box-left">
 							<th scope="row">
-								<span for="dpun">Plugin Update Notifications </span>
+								<span for="dpun">Plugin Update </span><br>
+								<small>Hide all plugins update notifications.</small>
 							</th>
 							<td>
 								<div class="onoffswitch">
@@ -72,9 +73,10 @@ function dwnSettings() {
 								</div>
 							</td>
 						</tr>
-						<tr>
+						<tr class="mlw-box-left">
 							<th scope="row">
-								<span for="dwtu">Theme Update Notifications</span>
+								<span for="dwtu">Theme Update</span><br>
+								<small>Hide all themes update notifications.</small>
 							</th>
 							<td>
 								<div class="onoffswitch">
@@ -87,9 +89,10 @@ function dwnSettings() {
 								</div>
 							</td>
 						</tr>
-						<tr>
+						<tr class="mlw-box-left">
 							<th scope="row">
-								<span for="dwcun">Core Update Notifications</span>
+								<span for="dwcun">WordPress Core Update</span><br>
+								<small>Hide WordPress core version update notifications.</small>
 							</th>
 							<td>
 								<div class="onoffswitch">
