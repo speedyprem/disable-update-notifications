@@ -1,6 +1,7 @@
 <?php
 /**
  * Disable auto-update Email Notifications.
+ * 
  * @since 2.2 version.
  */
 

@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name: Disable WordPress Update Notifications
- * Plugin URI: http://www.freewebmentor.com/2016/04/disable-wordpress-update-notifications.html
+ * Plugin URI: https://www.premtiwari.in/disable-wordpress-update-notifications/
  * Description: This plugin will disable WordPress core update notification, plugin update notification and theme update notifications and inline warnings in your admin panel.
  * Author: Prem Tiwari
- * Version: 2.3.0
- * Author URI: https://www.freewebmentor.com
+ * Version: 2.3.2
+ * Author URI: https://www.premtiwari.in/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

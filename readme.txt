@@ -2,7 +2,7 @@
 Contributors: freewebmentor
 Tags: disable, core update, plugin update, update notifications, hide Warnings
 Requires at least: 3.5
-Tested up to: 5.7
+Tested up to: 5.8.1
 Stable tag: trunk
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -42,13 +42,15 @@ Yes, will disable the core and plugins update checks.
 
 Yes.
 
-
 == Screenshots ==
 
 1. screenshot-1.png
 2. screenshot-2.png
 
 == Changelog ==
+= 2.3.2 - 22/09/2021 =
+* Fix: Hides all checkboxes in admin issue
+
 = 2.2 - 15/01/2021 =
 * Disable auto-update Email Notifications which was added as part of the WordPress 5.5 version.
 * Fixed PHPCS warnings.

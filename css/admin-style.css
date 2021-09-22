@@ -12,12 +12,12 @@ input[type="checkbox"] {
 }
 
 /* border radius for radio*/
-input[type="radio"] {
+.onoffswitch input[type="radio"] {
     border-radius: 100%;
 }
 
 /* border radius for checkbox */
-input[type="checkbox"] {
+.onoffswitch input[type="checkbox"] {
     border-radius: 2px;
     visibility: hidden;
 }
