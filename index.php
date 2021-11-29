@@ -19,7 +19,9 @@ define( 'DWUN_PLUGIN_BASE', plugin_basename( __FILE__ ) );
 require_once( dirname( __FILE__ ) . '/disable-auto-email-notification.php' );
 
 function admin_style() {
-	wp_enqueue_style( 'dwun-admin-style', plugins_url( "css/admin-style.css", __FILE__ ) );
+	if ( isset( $_GET['page'] ) && 'fm-dwns' === $_GET['page'] ) {
+		wp_enqueue_style( 'dwun-admin-style', plugins_url( "css/admin-style.css", __FILE__ ) );
+	}
 }
 
 add_action( 'admin_enqueue_scripts', 'admin_style' );
